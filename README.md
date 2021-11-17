@@ -142,6 +142,46 @@ Like the parallax effect, we're creating a new section in our `HTML` :
     </section>
 ```
 
-There are a lot of information here but we just need to remember that you must use a `swiper-container` div that include your `swiper slide`. Then, for the pagination of our carousel we add a `swiper pagination` container.
+There are a lot of information here but we just need to remember that you must use a `swiper-container` div that include your `swiper-slide`. Then, for the pagination of our carousel we add a `swiper-pagination` container.
 
-NB : my `swpier-pagination` is empty. I add the value directly in the JavaScript
+NB : my `swpier-pagination` is empty. I add the value directly in the JavaScript but you can add them in the html file.
+
+In the `main.js` file, we create a new instance of Swiper. It take on argument the `.swiper-container` and an object with the options of your carousel.
+
+```js
+var slider = new Swiper('.swiper-container', {
+    loop: true,
+    spaceBetween: 200, 
+    pagination:{
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function(index, className) {
+            return '<div class="' + className + '">' + keys[index] + "</div>";
+        }
+    }
+});
+```
+
+List the options :
+
+- **loop** : *boolean*. Allow the loop in the carousel. When we slide on the last slide, the first slide follow.
+- **spaceBetween** : *number*. Set the space between slide.
+- **pagination** : *object*. Customize the control on our carousel.
+    - **el** : *css class*. Set the pagination container.
+    - **clickable** : *boolean*. If true, we can navigate with the pagination.
+    - **renderBullet** : *function*. It take on arguments an index and a class name for the style in css. This function create all pagination items we need from the array `keys`
+
+So, we add the `keys` array in `main.js` :
+
+```js
+var keys = [
+    "Mercury",
+    "Venus",
+    "Earth",
+    "Mars",
+    "Jupiter",
+    "Saturn",
+    "Uranus",
+    "Neptune"
+  ];
+```
