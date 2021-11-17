@@ -185,3 +185,9 @@ var keys = [
     "Neptune"
   ];
 ```
+
+More information about Swiper in their [documentation](https://swiperjs.com/swiper-api)
+
+## Add animation on the carousel with anime.js
+
+In Swiper, there is a method called `slideChangeTransitionStart` that we use to set action on a change of slide. We're adding the animation with this method. For the animations, we're using `anime.js` library. It work very easy, here is the [documentation](https://animejs.com/documentation/) of it 
