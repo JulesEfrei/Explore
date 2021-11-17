@@ -4,7 +4,7 @@
 Make a moderne website using these JavaScript libraries by creating a prallax effect and an animated carousel. (No responsive)
 
 ### Demo : 
-- Clone the repository git the command bellow :
+- Clone the git repository with the command bellow :
 
 ```bash
 mkdir Explore
@@ -41,7 +41,7 @@ Link `anime.min.js` and other libraries import in your `HTML` file :
 ```html
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-<script src="./assets/js/main.js"></script>
+<script src="./assets/js/anime.min.js"></script>
 ```
 
 Then create a `main.js` file in your project and include it in your `HTML` :
@@ -51,7 +51,7 @@ touch main.js
 ```
 
 ```html
-<script src="./assets/js/anime.min.js"></script>
+<script src="./assets/js/main.js"></script>
 ```
 
 ## Parallax Effect on imgages
@@ -144,7 +144,7 @@ Like the parallax effect, we're creating a new section in our `HTML` :
 
 There are a lot of information here but we just need to remember that you must use a `swiper-container` div that include your `swiper-slide`. Then, for the pagination of our carousel we add a `swiper-pagination` container.
 
-NB : my `swpier-pagination` is empty. I add the value directly in the JavaScript but you can add them in the html file.
+NB : my `swpier-pagination` is empty. I add the value directly in JavaScript but you can add them in the html file.
 
 In the `main.js` file, we create a new instance of Swiper. It take on argument the `.swiper-container` and an object with the options of your carousel.
 
@@ -242,3 +242,12 @@ slider.on('slideChangeTransitionStart', function(){
     });
 });
 ```
+
+
+## Enjoy ✌🏻
+
+I hope I help you as much as you want. Now, you're able to create modern website with these three libraries and create trend website ! Here we've made a project with the three but you can use them individually.
+
+Thanks for reading !
+
+Have fun & Code !
