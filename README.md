@@ -63,17 +63,17 @@ First, we're creating a new section in our `html` with our images :
 ```html
 <section id="main">
         <div class="scene">
-            <div class="top">
+            <div class="top" data-depth="0.2">
                 <img src="./assets/img/background.png" alt="">
             </div>
-            <div class="planete">
+            <div class="planete" data-depth="0.6">
                 <img src="./assets/img/earth.png" alt="">
             </div>
             <h1 class="main_title parallax">PLANETES</h1>
-            <div class="bottom">
+            <div class="bottom" data-depth="0.2">
                 <img src="./assets/img/mid.png" alt="">
             </div>
-            <div class="forward">
+            <div class="forward" data-depth="0.1">
                 <img src="./assets/img/foreground.png" alt="">
             </div>
         </div>
@@ -89,4 +89,59 @@ var scene = document.querySelector('.scene');
 var parallax = new Parallax(scene);
 ```
 
-Now, we add `data-depth="value between 0 & 1"` attribute in each images. More the value is power, more the parallax will be intense on the image.
+Now, we add `data-depth="value between 0 & 1"` attribute in each conatiner of image like the up example. More the value is power, more the parallax will be intense on the image.
+
+## Carousel with Swiper
+
+Like the parallax effect, we're creating a new section in our `HTML` :
+
+```html
+<section id="slider">
+        <!-- required div -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+        <!-- 01 -->
+                <div class="swiper-slide">
+                    <div class="left mercure"></div>
+                    <div class="planet_text_container">
+                        <H1 class="title">MERCURY</H1>
+                        <p class="resume">
+                            Mercury is the closest planet to the Sun but, perhaps
+                            surprisingly, it does not have the highest temperatures. It is
+                            the second densest planet of the Solar System, but also the
+                            smallest planet. The structure of Mercury makes it the most
+                            similar planet to Earth.
+                        </p>
+                        <ul class="anim_text_list">
+                            <li>ORBIT PERIOD: 87.97 Earth days</li>
+                            <li>KNOWNS MOONS : None</li>
+                        </ul>
+                    </div>
+                </div>
+        <!-- 02 -->
+                <div class="swiper-slide">
+                    <div class="left venus"></div>
+                    <div class="planet_text_container">
+                        <H1 class="title">VENUS</H1>
+                        <p class="resume">
+                            Venus is the second planet from the Sun and the
+                            sixth-largest. Together with Mercury, they are the only
+                            planets without a satellite, even though Mercury is closer to
+                            the sun, Venus is the hottest planet.
+                        </p>
+                        <ul class="anim_text_list">
+                            <li>ORBIT PERIOD: 224.70 Earth days</li>
+                            <li>KNOWNS MOONS : None</li>
+                        </ul>
+                    </div>
+                </div>
+        <!-- required div -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+```
+
+There are a lot of information here but we just need to remember that you must use a `swiper-container` div that include your `swiper slide`. Then, for the pagination of our carousel we add a `swiper pagination` container.
+
+NB : my `swpier-pagination` is empty. I add the value directly in the JavaScript
