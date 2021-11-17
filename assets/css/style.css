@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
 
 @font-face {
   font-family: "main";
-  src: url("main.ttf");
+  src: url("../font/main.ttf");
 }
 
 @-webkit-keyframes rotate_network {
@@ -389,35 +389,35 @@ body::-webkit-scrollbar {
 }
 
 .terre {
-  background-image: url("img/earth1.png");
+  background-image: url("../img/earth1.png");
 }
 
 .mercure {
-  background-image: url("img/mercury.png");
+  background-image: url("../img/mercury.png");
 }
 
 .venus {
-  background-image: url("img/venus.png");
+  background-image: url("../img/venus.png");
 }
 
 .mars {
-  background-image: url("img/mars.png");
+  background-image: url("../img/mars.png");
 }
 
 .jupitere {
-  background-image: url("img/jupiter.png");
+  background-image: url("../img/jupiter.png");
 }
 
 .uranus {
-  background-image: url("img/uranus.png");
+  background-image: url("../img/uranus.png");
 }
 
 .neptune {
-  background-image: url("img/neptune.png");
+  background-image: url("../img/neptune.png");
 }
 
 .saturn {
-  background-image: url("img/saturn.png");
+  background-image: url("../img/saturn.png");
 }
 
 .swiper-pagination {
