@@ -191,3 +191,54 @@ More information about Swiper in their [documentation](https://swiperjs.com/swip
 ## Add animation on the carousel with anime.js
 
 In Swiper, there is a method called `slideChangeTransitionStart` that we use to set action on a change of slide. We're adding the animation with this method. For the animations, we're using `anime.js` library. It work very easy, here is the [documentation](https://animejs.com/documentation/) of it 
+
+### How works anime.js
+
+In our `main.js`, we simply use the anime function and set the animation with all property as you can see in the doc.
+
+```js
+anime({
+        targets: '.title', 
+        translateX: [500, 0],
+        opacity: [0, 1],
+        easing: 'easeOutElastic(1, 10)',
+        duration: 2000
+    });
+```
+
+```diff
+! The targets key is required. It takes on value the class (or id) of the element in HTML 
+```
+Then, there are other option for our animation. 
+Here we have a translateX from x = 500 to x = 0,
+an opacity from 0 to 1,
+an easing and the duration of the animation.
+
+So in our project, I tell you we're using `slideChangeTransitionStart` Swiper method.
+Finally 
+```js
+slider.on('slideChangeTransitionStart', function(){
+    anime({
+        targets: '.title', 
+        translateX: [500, 0],
+        opacity: [0, 1],
+        easing: 'easeOutElastic(1, 10)',
+        duration: 2000
+    });
+    anime({
+        targets: '.resume', 
+        translateX: [250, 0],
+        opacity: [0, 1],
+        delay: 300,
+        easing: 'easeOutElastic(1, 10)',
+        duration: 2000
+    });
+    anime({
+        targets: '.anim_text_list', 
+        translateY: [250, 0],
+        opacity: [0, 1],
+        easing: 'easeOutElastic(1, 10)',
+        duration: 2000
+    });
+});
+```
