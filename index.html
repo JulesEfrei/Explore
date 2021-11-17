@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8456d49668.js" crossorigin="anonymous"></script>
+    <title>Explore.</title>
+</head>
+<body>
+     
+
+<!-- NavBar -->
+    <nav id="nav">
+        <div class="hotbar">
+            <h1>Explore.</h1>
+            <a href="#" class='hamburger' onclick="menu_animation('moins', 'none'); anim_list();"><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="right_menu">
+            <a href="#" class="cross" onclick="menu_animation('plus' ,'block');"><i class="fas fa-times"></i></a>
+            <h1 class="title_right_menu">Menu</h1>
+            <div class="menu_container_item">
+                <a href="#main" class="list_item" onclick="menu_animation('plus' ,'block');">Home</a>
+                <a href="#slider" class="list_item" onclick="menu_animation('plus' ,'block');">Slider</a>
+                <a href="#" class="list_item" onclick="menu_animation('plus' ,'block');">About</a>
+            </div>
+            <div class="social_network">
+                <a href="#" class="list_network_anim"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="list_network_anim"><i class="fab fa-github"></i></a>
+                <a href="#" class="list_network_anim"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Première Section (Parallax) -->
+    <section id="main">
+        <div class="scene">
+            <div class="top" data-depth="0.2">
+                <img src="img/background.png" alt="">
+            </div>
+            <div class="planete" data-depth="0.6">
+                <img src="img/earth.png" alt="">
+            </div>
+            <h1 class="main_title parallax" data-depth="0.1">PLANETES</h1>
+            <div class="bottom" data-depth="0.2">
+                <img src="img/mid.png" alt="">
+            </div>
+            <div class="forward" data-depth="0.1">
+                <img src="img/foreground.png" alt="">
+            </div>
+        </div>
+        <h1 class="arrow"><i class="fas fa-arrow-down"></i></h1>
+    </section>
+
+
+<!-- Deuxième section (slider)-->
+    <section id="slider">
+        <!-- required div -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+        <!-- 01 -->
+                <div class="swiper-slide">
+                    <div class="left mercure"></div>
+                    <div class="planet_text_container">
+                        <H1 class="title">MERCURY</H1>
+                        <p class="resume">
+                            Mercury is the closest planet to the Sun but, perhaps
+                            surprisingly, it does not have the highest temperatures. It is
+                            the second densest planet of the Solar System, but also the
+                            smallest planet. The structure of Mercury makes it the most
+                            similar planet to Earth.
+                        </p>
+                        <ul class="anim_text_list">
+                            <li>ORBIT PERIOD: 87.97 Earth days</li>
+                            <li>KNOWNS MOONS : None</li>
+                        </ul>
+                    </div>
+                </div>
+        <!-- 02 -->
+                <div class="swiper-slide">
+                    <div class="left venus"></div>
+                    <div class="planet_text_container">
+                        <H1 class="title">VENUS</H1>
+                        <p class="resume">
+                            Venus is the second planet from the Sun and the
+                            sixth-largest. Together with Mercury, they are the only
+                            planets without a satellite, even though Mercury is closer to
+                            the sun, Venus is the hottest planet.
+                        </p>
+                        <ul class="anim_text_list">
+                            <li>ORBIT PERIOD: 224.70 Earth days</li>
+                            <li>KNOWNS MOONS : None</li>
+                        </ul>
+                    </div>
+                </div>        
+        <!-- 03 -->
+                <div class="swiper-slide">
+                    <div class="left terre"></div>
+                    <div class="planet_text_container">
+                        <H1 class="title">EARTH</H1>
+                        <p class="resume">
+                            Earth is the third planet from Sun and the fifth largest planet in the Solar System
+                            with the highest density. It's currently the only knowns location where life is
+                            present.
+                        </p>
+                        <ul class="anim_text_list">
+                            <li>ORBIT PERIOD: 365.25 Earth days</li>
+                            <li>KNOWNS MOONS : 1</li>
+                        </ul>
+                    </div>
+                </div>
+        <!-- 04 -->
+                <div class="swiper-slide">
+                    <div class="left mars"></div>
+                    <div class="planet_text_container">
+                        <H1 class="title">MARS</H1>
+                        <p class="resume">
+                            Mars is the fourth planet from the Sun and the
+                            second-smallest planet with a thin atmosphere, having the
+                            surface features reminiscent both of the impact craters of the
+                            Moon, and the valleys, deserts and polar ice caps of Earth.
+                        </p>
+                        <ul class="anim_text_list">
+                            <li>ORBIT PERIOD: 686.98 Earth days</li>
+                            <li>KNOWNS MOONS : 2</li>
+                        </ul>
+                    </div>
+                </div>
+        <!-- 05 -->
+                <div class="swiper-slide">
+                    <div class="left jupitere"></div>
+                    <div class="planet_text_container">
+                        <H1 class="title">Jupiter</H1>
+                        <p class="resume">
+                            Jupiter is the fifth planet from the Sun and the largest
+                            planet of the Solar System. It is the oldest planet of the
+                            Solar System thus it was the first to take shape out of the
+                            remains of the solar nebula.
+                        </p>
+                        <ul class="anim_text_list">
+                            <li>ORBIT PERIOD: 4,332.82 Earth days</li>
+                            <li>KNOWNS MOONS : 67</li>
+                        </ul>
+                    </div>
+                </div>
+        <!-- 06 -->
+                <div class="swiper-slide">
+                    <div class="left saturn"></div>
+                    <div class="planet_text_container">
+                        <H1 class="title">Saturn</H1>
+                        <p class="resume">
+                            Saturn is the sixth planet from the Sun, with the largest
+                            planetary rings in the Solar System. It is the second-largest
+                            planet after Jupiter, and recently, with many other moons
+                            being discovered, it surpassed the number of Jupiter’s moons.
+                        </p>
+                        <ul class="anim_text_list">
+                            <li>ORBIT PERIOD: 10;755.70 Earth days</li>
+                            <li>KNOWNS MOONS : 62</li>
+                        </ul>
+                    </div>
+                </div>
+        <!-- 07 -->
+                <div class="swiper-slide">
+                    <div class="left uranus"></div>
+                    <div class="planet_text_container">
+                        <H1 class="title">URANUS</H1>
+                        <p class="resume">
+                            Uranus is the seventh planet discovered in the Solar System
+                            that also led to the discovery of the last planet, Neptune
+                            they are both referred to as ice giants.
+                        </p>
+                        <ul class="anim_text_list">
+                            <li>ORBIT PERIOD: 30,687.15 Earth days</li>
+                            <li>KNOWNS MOONS : 27</li>
+                        </ul>
+                    </div>
+                </div>
+        <!-- 08 -->
+                <div class="swiper-slide">
+                    <div class="left neptune"></div>
+                    <div class="planet_text_container">
+                        <H1 class="title">NEPTUNE</H1>
+                        <p class="resume">
+                            Neptune is the fourth largest and the farthest planet of the
+                            Solar System with the most powerful wind speeds out of all the
+                            planets. It is the smallest of the gas giants.
+                        </p>
+                        <ul class="anim_text_list">
+                            <li>ORBIT PERIOD: 60,190.03 Earth days</li>
+                            <li>KNOWNS MOONS : 14</li>
+                        </ul>
+                    </div>
+                </div>
+        <!-- required div -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
+
+
+<!--
+    Correction : 
+        -Menu de droite qui remonte automatiquement (appliquer top en Js avec ClientPageY)
+-->
