@@ -36,7 +36,7 @@ npm install anime.js --save
 
 ### File include
 
-Link `anime.min.js` and other library import in your `HTML` file :
+Link `anime.min.js` and other libraries import in your `HTML` file :
 
 ```html
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
@@ -53,3 +53,40 @@ touch main.js
 ```html
 <script src="./assets/js/anime.min.js"></script>
 ```
+
+## Parallax Effect on imgages
+
+Our Website is about space but the concept is the same with all images as you would
+
+First, we're creating a new section in our `html` with our images :
+
+```html
+<section id="main">
+        <div class="scene">
+            <div class="top">
+                <img src="./assets/img/background.png" alt="">
+            </div>
+            <div class="planete">
+                <img src="./assets/img/earth.png" alt="">
+            </div>
+            <h1 class="main_title parallax">PLANETES</h1>
+            <div class="bottom">
+                <img src="./assets/img/mid.png" alt="">
+            </div>
+            <div class="forward">
+                <img src="./assets/img/foreground.png" alt="">
+            </div>
+        </div>
+    </section>
+```
+
+Note that we have a `.scene` container. It must be here for the parallax.
+
+Then in our `main.js`, we get the `.scene` conatiner and we create a new parallax with it.
+
+```js
+var scene = document.querySelector('.scene');
+var parallax = new Parallax(scene);
+```
+
+Now, we add `data-depth="value between 0 & 1"` attribute in each images. More the value is power, more the parallax will be intense on the image.
