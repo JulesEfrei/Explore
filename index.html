@@ -12,52 +12,9 @@
     <title>Explore.</title>
 </head>
 <body>
-     
-
-<!-- NavBar -->
-    <nav id="nav">
-        <div class="hotbar">
-            <h1>Explore.</h1>
-            <a href="#" class='hamburger' onclick="menu_animation('moins', 'none'); anim_list();"><i class="fas fa-bars"></i></a>
-        </div>
-        <div class="right_menu">
-            <a href="#" class="cross" onclick="menu_animation('plus' ,'block');"><i class="fas fa-times"></i></a>
-            <h1 class="title_right_menu">Menu</h1>
-            <div class="menu_container_item">
-                <a href="#main" class="list_item" onclick="menu_animation('plus' ,'block');">Home</a>
-                <a href="#slider" class="list_item" onclick="menu_animation('plus' ,'block');">Slider</a>
-                <a href="#" class="list_item" onclick="menu_animation('plus' ,'block');">About</a>
-            </div>
-            <div class="social_network">
-                <a href="#" class="list_network_anim"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="list_network_anim"><i class="fab fa-github"></i></a>
-                <a href="#" class="list_network_anim"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </nav>
-
-<!-- Première Section (Parallax) -->
-    <section id="main">
-        <div class="scene">
-            <div class="top" data-depth="0.2">
-                <img src="./assets/img/background.png" alt="">
-            </div>
-            <div class="planete" data-depth="0.6">
-                <img src="./assets/img/earth.png" alt="">
-            </div>
-            <h1 class="main_title parallax" data-depth="0.1">PLANETES</h1>
-            <div class="bottom" data-depth="0.2">
-                <img src="./assets/img/mid.png" alt="">
-            </div>
-            <div class="forward" data-depth="0.1">
-                <img src="./assets/img/foreground.png" alt="">
-            </div>
-        </div>
-        <h1 class="arrow"><i class="fas fa-arrow-down"></i></h1>
-    </section>
 
 
-<!-- Deuxième section (slider)-->
+<!-- Première section (slider)-->
     <section id="slider">
         <!-- required div -->
         <div class="swiper-container">
@@ -206,14 +163,7 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="./assets/js/anime.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script src="./assets/js/main.js"></script>
 
 </body>
 </html>
-
-
-<!--
-    Correction : 
-        -Menu de droite qui remonte automatiquement (appliquer top en Js avec ClientPageY)
--->
