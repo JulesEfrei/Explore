@@ -1,7 +1,7 @@
-# Explore template
-## With Swiper.js, anime.js & parallax.js
+# Modern carousel template
+## Width Swipper.js & anime.js
 
-Make a moderne website using these JavaScript libraries by creating a prallax effect and an animated carousel. (No responsive)
+Make a modern and animate carousel with this template. (Responsive)
 
 ### Demo : 
 - Clone the git repository with the command bellow :
@@ -36,11 +36,10 @@ npm install anime.js --save
 
 ### File include
 
-Link `anime.min.js` and other libraries import in your `HTML` file :
+Link `anime.min.js` and Swipper import in your `HTML` file :
 
 ```html
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script src="./assets/js/anime.min.js"></script>
 ```
 
@@ -53,47 +52,13 @@ touch main.js
 ```html
 <script src="./assets/js/main.js"></script>
 ```
+# How to use & modify the template
 
-## Parallax Effect on imgages
-
-Our Website is about space but the concept is the same with all images as you would
-
-First, we're creating a new section in our `html` with our images :
-
-```html
-<section id="main">
-        <div class="scene">
-            <div class="top" data-depth="0.2">
-                <img src="./assets/img/background.png" alt="">
-            </div>
-            <div class="planete" data-depth="0.6">
-                <img src="./assets/img/earth.png" alt="">
-            </div>
-            <h1 class="main_title parallax">PLANETES</h1>
-            <div class="bottom" data-depth="0.2">
-                <img src="./assets/img/mid.png" alt="">
-            </div>
-            <div class="forward" data-depth="0.1">
-                <img src="./assets/img/foreground.png" alt="">
-            </div>
-        </div>
-    </section>
-```
-
-Note that we have a `.scene` container. It must be here for the parallax.
-
-Then in our `main.js`, we get the `.scene` conatiner and we create a new parallax with it.
-
-```js
-var scene = document.querySelector('.scene');
-var parallax = new Parallax(scene);
-```
-
-Now, we add `data-depth="value between 0 & 1"` attribute in each conatiner of image like the up example. More the value is power, more the parallax will be intense on the image.
+As see before, you can import externals fonts. Just place your font in the right folder. Or, you can import Goggle font and link it to the `html` file.
 
 ## Carousel with Swiper
 
-Like the parallax effect, we're creating a new section in our `HTML` :
+As you can see in the `html`there are a section `#slider`. It matches to the carousel.
 
 ```html
 <section id="slider">
@@ -142,11 +107,14 @@ Like the parallax effect, we're creating a new section in our `HTML` :
     </section>
 ```
 
-There are a lot of information here but we just need to remember that you must use a `swiper-container` div that include your `swiper-slide`. Then, for the pagination of our carousel we add a `swiper-pagination` container.
+There are a lot of information here but we just need to remember that you musn't remove the `swiper-container` div and these `swiper-slide` container to. Then, don't remove the `swiper-paganitaion`div. 
+You can modify all the content inside the `.swipper-slide`container. Each of these conatiner is a slide. In this template, you already have an image on the left of the slide and at the right, a text / descrirption section.
 
-NB : my `swpier-pagination` is empty. I add the value directly in JavaScript but you can add them in the html file.
+INSERT SCREENSHOT
 
-In the `main.js` file, we create a new instance of Swiper. It take on argument the `.swiper-container` and an object with the options of your carousel.
+NB : my `swpier-pagination` is empty. You will modify the value directly in JavaScript but you can add them in the html file if you prefer.
+
+In the `main.js` file, there is a instance of Swiper. It take on argument the `.swiper-container` (I told you.. Don't remove this container) and an object with the options of your carousel.
 
 ```js
 var slider = new Swiper('.swiper-container', {
@@ -162,7 +130,7 @@ var slider = new Swiper('.swiper-container', {
 });
 ```
 
-List the options :
+Here is the list the options :
 
 - **loop** : *boolean*. Allow the loop in the carousel. When we slide on the last slide, the first slide follow.
 - **spaceBetween** : *number*. Set the space between slide.
@@ -171,7 +139,7 @@ List the options :
     - **clickable** : *boolean*. If true, we can navigate with the pagination.
     - **renderBullet** : *function*. It take on arguments an index and a class name for the style in css. This function create all pagination items we need from the array `keys`
 
-So, we add the `keys` array in `main.js` :
+So, there is the `keys` array in `main.js` :
 
 ```js
 var keys = [
@@ -186,11 +154,12 @@ var keys = [
   ];
 ```
 
+Modify this array with your own pagination. You can also modify the options of the carousel.
 More information about Swiper in their [documentation](https://swiperjs.com/swiper-api)
 
 ## Add animation on the carousel with anime.js
 
-In Swiper, there is a method called `slideChangeTransitionStart` that we use to set action on a change of slide. We're adding the animation with this method. For the animations, we're using `anime.js` library. It work very easy, here is the [documentation](https://animejs.com/documentation/) of it 
+In Swiper, there is a method called `slideChangeTransitionStart` that we use to set actions on a change of slide. We're adding the animation with this method. For the animations, we're using the `anime.js` library. It work very easy, here is the [documentation](https://animejs.com/documentation/) of it. By default in this template, there are tiny animation of each element in slides when the slide change and a loop animation of the image. You can modify and/or remove all of them and create your own.
 
 ### How works anime.js
 
@@ -214,8 +183,7 @@ Here we have a translateX from x = 500 to x = 0,
 an opacity from 0 to 1,
 an easing and the duration of the animation.
 
-So in our project, I tell you we're using `slideChangeTransitionStart` Swiper method.
-Finally 
+So in the template, we finally have these animations :
 ```js
 slider.on('slideChangeTransitionStart', function(){
     anime({
@@ -246,7 +214,7 @@ slider.on('slideChangeTransitionStart', function(){
 
 ## Enjoy ✌🏻
 
-I hope I help you as much as you want. Now, you're able to create modern website with these three libraries and create trend website ! Here we've made a project with the three but you can use them individually.
+I hope I help you as much as you want and this template help you to save your time. Now, you can use a modern carousel in your own website.
 
 Thanks for reading !
 
