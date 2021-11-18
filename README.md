@@ -30,6 +30,16 @@ I'm using Sass by default in all my front-end project for these features. Of cou
 
 ### Download
 
+Start by clone the repository in your project :
+
+```bash
+cd "your_project"
+mkdir template cd template
+git clone https://github.com/JulesEfrei/Explore.git
+```
+
+Now download the anime.js depencies
+
 ```bash
 npm install anime.js --save
 ```
@@ -54,7 +64,8 @@ touch main.js
 ```
 # How to use & modify the template
 
-As see before, you can import externals fonts. Just place your font in the right folder. Or, you can import Goggle font and link it to the `html` file.
+As see before, you can import externals fonts. Just place your font in the right folder. Or, you can import Goggle font and link it to the `html` file. 
+If you don't use Sass in your project, you can remove the `styles.scss`& `style.css.map` files and modify style in the classic `styles.css`file.
 
 ## Carousel with Swiper
 
