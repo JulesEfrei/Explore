@@ -34,7 +34,7 @@ Start by clone the repository in your project :
 
 ```bash
 cd "your_project"
-mkdir template cd template
+mkdir template; cd template
 git clone https://github.com/JulesEfrei/Explore.git
 ```
 
