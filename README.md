@@ -3,6 +3,8 @@
 
 Make a modern and animated carousel with this template. (Responsive)
 
+![](./assets/img/screen.png)
+
 ### Demo : 
 - Clone the git repository with the command bellow :
 
