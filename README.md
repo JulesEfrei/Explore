@@ -1,7 +1,7 @@
 # Modern carousel template
 ## Width Swipper.js & anime.js
 
-Make a modern and animate carousel with this template. (Responsive)
+Make a modern and animated carousel with this template. (Responsive)
 
 ### Demo : 
 - Clone the git repository with the command bellow :
@@ -24,13 +24,13 @@ git clone https://github.com/JulesEfrei/Explore.git
 
 ### Why Javascript & Sass
 
-I'm using Sass by default in all my front-end project for these features. Of course, you can understand all the project without a knoledge of Sass (Sass is a css tools). Then JavaScript is a basic for all moderne and dynamique website for the aniation and the flexibility with the DOM. 
+I use Sass by default in all my front-end projects for these features. Of course, you can understand the whole project without having a knowledge of Sass (Sass is a css tool). Secondly, JavaScript is a staple for any modern and dynamic website for animations and flexibility with the DOM.
 
 ## Getting Started
 
 ### Download
 
-Start by clone the repository in your project :
+Start by cloning the repository into your project :
 
 ```bash
 cd "your_project"
@@ -46,14 +46,14 @@ npm install anime.js --save
 
 ### File include
 
-Link `anime.min.js` and Swipper import in your `HTML` file :
+Link `anime.min.js` and the Swipper import in your `HTML` file :
 
 ```html
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="./assets/js/anime.min.js"></script>
 ```
 
-Then create a `main.js` file in your project and include it in your `HTML` :
+Then, create a `main.js` file in your project and include it in your `HTML` :
 
 ```bash
 touch main.js
@@ -64,12 +64,11 @@ touch main.js
 ```
 # How to use & modify the template
 
-As see before, you can import externals fonts. Just place your font in the right folder. Or, you can import Goggle font and link it to the `html` file. 
-If you don't use Sass in your project, you can remove the `styles.scss`& `style.css.map` files and modify style in the classic `styles.css`file.
+As we have seen before, you can import external fonts. Just put your font in the right folder. Or you can import a Goggle font and link it to the `html` file. If you are not using Sass in your project, you can delete the `styles.scss` & `style.css.map` files and change the style in the regular `styles.css` file.
 
 ## Carousel with Swiper
 
-As you can see in the `html`there are a section `#slider`. It matches to the carousel.
+As you can see in the `html` there is a `#slider` section. It corresponds to the carousel.
 
 ```html
 <section id="slider">
@@ -118,14 +117,14 @@ As you can see in the `html`there are a section `#slider`. It matches to the car
     </section>
 ```
 
-There are a lot of information here but we just need to remember that you musn't remove the `swiper-container` div and these `swiper-slide` container to. Then, don't remove the `swiper-paganitaion`div. 
-You can modify all the content inside the `.swipper-slide`container. Each of these conatiner is a slide. In this template, you already have an image on the left of the slide and at the right, a text / descrirption section.
+There are a lot of informations here but you just need to remember that you should not remove the `swiper-container` div and those `swiper-slide` containers. Then, don't remove the `swiper-paganitaion` div. 
+You can edit all the content inside the `.swipper-slide` container. Each of these conatiner is a slide. In this template, you already have an image on the left of the slide and on the right, a text / descrirption section.
 
-INSERT SCREENSHOT
+![](./assets/img/screen.png)
 
-NB : my `swpier-pagination` is empty. You will modify the value directly in JavaScript but you can add them in the html file if you prefer.
+NB : my `swpier-pagination` is empty. You will change the values directly in JavaScript but you can also add them in the html file if you prefer.
 
-In the `main.js` file, there is a instance of Swiper. It take on argument the `.swiper-container` (I told you.. Don't remove this container) and an object with the options of your carousel.
+In the `main.js` file, there is a instance of Swiper. It takes as arguments the `.swiper-container` (I told you.. Don't delete this container) and an object with the options of your carousel.
 
 ```js
 var slider = new Swiper('.swiper-container', {
@@ -165,16 +164,16 @@ var keys = [
   ];
 ```
 
-Modify this array with your own pagination. You can also modify the options of the carousel.
+Modify this array with your own pagination. You can also change the carousel options.
 More information about Swiper in their [documentation](https://swiperjs.com/swiper-api)
 
 ## Add animation on the carousel with anime.js
 
-In Swiper, there is a method called `slideChangeTransitionStart` that we use to set actions on a change of slide. We're adding the animation with this method. For the animations, we're using the `anime.js` library. It work very easy, here is the [documentation](https://animejs.com/documentation/) of it. By default in this template, there are tiny animation of each element in slides when the slide change and a loop animation of the image. You can modify and/or remove all of them and create your own.
+In Swiper, there is a method called `slideChangeTransitionStart` that we use to set actions when changing slides. It is with this method that we add the animation. For animations, we use the `anime.js` library. It works very easy, here is its [documentation](https://animejs.com/documentation/). By default in this template, there are tiny animation of each slides elements when the slide changes and a looping animation of the image. You can change and/or remove all of them and create your own animations.
 
 ### How works anime.js
 
-In our `main.js`, we simply use the anime function and set the animation with all property as you can see in the doc.
+In our `main.js`, we simply use the anime function and define the animation with all properties as you can see in the doc.
 
 ```js
 anime({
